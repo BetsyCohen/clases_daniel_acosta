@@ -1,6 +1,8 @@
 ---
-title: "02_ejercicios_graficos.qmd"
+title: "Ejercicios de gráficos con `ggplot`"
 format: html
 ---
 
-Descargar el script aqui
+En estas clases trabajamos en las múltiples formas de contar historias con gráficos con una librería clásica de R `ggplot`
+
+Descargar el script [aquí](https://github.com/BetsyCohen/clases_daniel_acosta/blob/main/clases/02_ejercicios_graficos.R)

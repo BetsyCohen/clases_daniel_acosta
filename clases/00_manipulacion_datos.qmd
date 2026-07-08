@@ -5,4 +5,4 @@ format: html
 
 En esta clase trabajamos los elementos básicos de manipulación de datos con r
 
-Descargar el script aqui
+Descargar el script [aqui](https://github.com/BetsyCohen/clases_daniel_acosta/blob/main/clases/00_manipulacion_datos.R)

@@ -37,9 +37,15 @@ Guías, enlaces, paquetes de R y materiales complementarios.
 ### 🎯Plan de guerra
 
 ☑ Definición del problema
+
 ☑ Recolección de datos
+
 ☑ Organización de bases
+
 ◐ Procesamiento
+
 □ Análisis
+
 □ Escritura
+
 □ Defensa

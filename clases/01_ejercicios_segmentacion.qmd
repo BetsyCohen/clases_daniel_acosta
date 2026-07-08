@@ -1,6 +1,8 @@
 ---
-title: "01_ejercicios_segmentacion"
+title: "Ejercicios de segmentación"
 format: html
 ---
 
-Descargar aqui
+En estas clases trabajamos en el proceso de una segmentación inicial del universo de alumnos en función de su trayectoria
+
+Descargar el script [aquí](https://github.com/BetsyCohen/clases_daniel_acosta/blob/main/clases/01_ejercicios_segmentacion.R)
