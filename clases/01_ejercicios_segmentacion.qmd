@@ -1,0 +1,6 @@
+---
+title: "01_ejercicios_segmentacion"
+format: html
+---
+
+Descargar aqui

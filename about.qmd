@@ -1,9 +1,5 @@
 ---
-title: "About"
+title: "Sobre este sitio"
 ---
 
-About this site
-
-```{r}
-1 + 1
-```
+Notebooks, scripts, bases de datos y decisiones metodológicas para llegar vivo a la defensa.

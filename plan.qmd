@@ -1,0 +1,20 @@
+---
+title: "Plan de guerra"
+editor: visual
+---
+
+## Procesamiento
+
+-   Elaboración del Plan de Cuadros como parte del trabajo de planificación de análisis elaboramos nuestro primer PDC
+
+-   Repaso de procesamieno de datos básico
+
+-   Segmentar la población: en las clases trabajamos en ver cómo segmentar nuestra población de estudiantes
+
+-   Ejercicios de gráficos
+
+-   Aprendemos a organizar nuestro proyecto de investigación
+
+-   Quarto
+
+-   Proyectos reproductibles con GitHub

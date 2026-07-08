@@ -1,11 +1,45 @@
 ---
-title: "clases_daniel_acosta"
+title: "Sobreviviendo a la Tesis con R"
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
-This is a Quarto website.
+## Bienvenido
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Este sitio reúne los materiales de trabajo utilizados durante las clases
+de R orientadas al desarrollo de la tesis de Daniel Acosta.
 
-```{r}
-1 + 1
-```
+El objetivo es construir un flujo de trabajo reproducible para la
+gestión, procesamiento y análisis de datos, incorporando buenas
+prácticas de investigación y programación.
+
+## ¿Qué encontrarás aquí?
+
+### 📚 Clases
+
+Materiales, ejercicios y ejemplos trabajados durante las clases.
+
+### 📊 Proyecto de tesis
+
+Documentación del procesondefined de análisis, decisiones metodológicas
+y avances del proyecto.
+
+### 💻 Bases de ejemplo
+
+Archivos de práctica para experimentar con técnicas de limpieza,
+transformación y análisis de datos.
+
+### 🛠 Herramientas
+
+Guías, enlaces, paquetes de R y materiales complementarios.
+
+### 🎯Plan de guerra
+
+☑ Definición del problema
+☑ Recolección de datos
+☑ Organización de bases
+◐ Procesamiento
+□ Análisis
+□ Escritura
+□ Defensa

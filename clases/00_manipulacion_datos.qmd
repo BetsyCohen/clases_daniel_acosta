@@ -1,0 +1,8 @@
+---
+title: "Manipulacion de datos"
+format: html
+---
+
+En esta clase trabajamos los elementos básicos de manipulación de datos con r
+
+Descargar el script aqui

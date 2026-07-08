@@ -1,0 +1,6 @@
+---
+title: "02_ejercicios_graficos.qmd"
+format: html
+---
+
+Descargar el script aqui

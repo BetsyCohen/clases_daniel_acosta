@@ -2,19 +2,27 @@ project:
   type: website
 
 website:
-  title: "Clases Daniel Acosta"
+  title: "Sobreviviendo a la Tesis con R"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: Inicio
+      - href: plan.qmd
+        text: Plan de trabajo
+      - text: Clases
+        menu:
+          - href: clases/00_manipulacion_datos.qmd
+            text: Manipulacion de datos
+          - href: clases/01_ejercicios_segmentacion.qmd
+            text: Ejercicios Segmentacion
+          - href: clases/02_ejercicios_graficos.qmd
+            text: Ejercicios Graficos  
+      - href: recursos.qmd
+        text: Recursos
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
+    theme: cosmo
     toc: true
 
 
