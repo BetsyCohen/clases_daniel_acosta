@@ -1,0 +1,8 @@
+---
+title: "Workflows de trabajo en R"
+format: html
+---
+
+En esta clase empezamos a pensar los proyectos de R como un conjunto de diferenets archivos y carpetas que dialogan.
+
+Descaraga la estructura de carpeta [aquí](https://github.com/BetsyCohen/clases_daniel_acosta/blob/main/otros_materiales/fake_tesis.zip)
