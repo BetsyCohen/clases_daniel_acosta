@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>recursos – Sobreviviendo a la Tesis con R</title>
+<title>Recursos – Sobreviviendo a la Tesis con R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -133,15 +133,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#paquetes-y-librerías" id="toc-paquetes-y-librerías" class="nav-link active" data-scroll-target="#paquetes-y-librerías">📦Paquetes y librerías</a></li>
+  <li><a href="#libros" id="toc-libros" class="nav-link" data-scroll-target="#libros">📖 Libros</a></li>
+  <li><a href="#sitios" id="toc-sitios" class="nav-link" data-scroll-target="#sitios">🔗 Sitios</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">recursos</h1>
+<h1 class="title">Recursos</h1>
 </div>
 
 
@@ -158,8 +166,56 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>En esta sección vamos a reunir varios recursos que trabajamos a lo largo de las clases</p>
+<section id="paquetes-y-librerías" class="level2">
+<h2 class="anchored" data-anchor-id="paquetes-y-librerías">📦Paquetes y librerías</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Paquete</th>
+<th>Para qué sirve</th>
+<th>Documentación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="https://docs.ropensci.org/skimr/reference/figures/logo.png" class="img-fluid" width="85"></td>
+<td>Nos proporciona estadísticos de resumen para revisar y entender rápidamente las características de nuestra base. La función que más vamos a usar es <code>skimr()</code> para ver estadisticos de resumen de un data set</td>
+<td><a href="https://docs.ropensci.org/skimr/index.html" class="uri">https://docs.ropensci.org/skimr/index.html</a></td>
+</tr>
+<tr class="even">
+<td><img src="https://dplyr.tidyverse.org/logo.png" class="img-fluid" width="85"></td>
+<td>Es la librería estrella de tydyverse para manipulación de datos básica. A través de sus funciones <code>mutate() group_by() select() filter() summarise(</code>) y <code>arrange()</code> podemos construir tablas y manipular datos facilmente</td>
+<td><a href="https://dplyr.tidyverse.org/" class="uri">https://dplyr.tidyverse.org/</a></td>
+</tr>
+<tr class="odd">
+<td><img src="https://sfirke.github.io/janitor/reference/figures/logo_small.png" class="img-fluid" width="85"></td>
+<td>Janitor nos ofrece algunas funciones que facilitan la diaria como <code>clean_names()</code> para emprolijar los nombres de nuestras variables, <code>get_dupes()</code> obtener listados de duplicados, u obtener tablas de frecuencia con <code>tabyl().</code>Janitor es un portero buena onda 😎</td>
+<td><a href="https://sfirke.github.io/janitor/index.html" class="uri">https://sfirke.github.io/janitor/index.html</a></td>
+</tr>
+<tr class="even">
+<td><img src="https://gt.rstudio.com/reference/figures/logo.svg" class="img-fluid" width="82"></td>
+<td>Lindo es mejor que feo y posit lo sabe por eso con la librería gt() vas a poder crear tablas que se vean bonitas y profesionales. Con una lógica de gramática de tablas (guiño a ggplot) que las disecciona en diferentes partes podes retocar desde el título hasta la fuennte</td>
+<td><a href="https://gt.rstudio.com/" class="uri">https://gt.rstudio.com/</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="libros" class="level2">
+<h2 class="anchored" data-anchor-id="libros">📖 Libros</h2>
+<ul>
+<li><p><a href="https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/">Vazquez Brust A. (2018). Ciencia de Datos para Gente Sociable - Una introducción a la exploración, análisis y visualización de datos</a></p></li>
+<li><p><a href="https://www.tmwr.org/">Kuhn M. and Silge J. (2023). Tidy Modeling with R</a></p></li>
+</ul>
+</section>
+<section id="sitios" class="level2">
+<h2 class="anchored" data-anchor-id="sitios">🔗 Sitios</h2>
+<ul>
+<li><a href="https://r-graph-gallery.com/" class="uri">https://r-graph-gallery.com/</a> Una galería de gráficos de R con ggplot super completa</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
