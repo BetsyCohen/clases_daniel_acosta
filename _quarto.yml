@@ -16,7 +16,9 @@ website:
           - href: clases/01_ejercicios_segmentacion.qmd
             text: Ejercicios Segmentacion
           - href: clases/02_ejercicios_graficos.qmd
-            text: Ejercicios Graficos  
+            text: Ejercicios Graficos 
+          - href: clases/03_workflows.qmd
+            text: Workflows
       - href: recursos.qmd
         text: Recursos
 
