@@ -7,53 +7,18 @@
     "text": "En esta clase trabajamos los elementos básicos de manipulación de datos con r\nDescargar el script aqui"
   },
   {
-    "objectID": "clases/01_ejercicios_segmentacion.html",
-    "href": "clases/01_ejercicios_segmentacion.html",
-    "title": "Ejercicios de segmentación",
+    "objectID": "clases/03_ejercicios_descripcion_muestra.html",
+    "href": "clases/03_ejercicios_descripcion_muestra.html",
+    "title": "03_ejercicios_descripcion_muestra",
     "section": "",
-    "text": "En estas clases trabajamos en el proceso de una segmentación inicial del universo de alumnos en función de su trayectoria\nDescargar el script aquí"
+    "text": "En esta clase retomamos la tarea de hacer una descripción de la muestra.\nDescargar el script aquí"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Sobre este sitio",
+    "objectID": "clases/02_ejercicios_graficos.qmd.html",
+    "href": "clases/02_ejercicios_graficos.qmd.html",
+    "title": "Ejercicios de gráficos con ggplot",
     "section": "",
-    "text": "Notebooks, scripts, bases de datos y decisiones metodológicas para llegar vivo a la defensa."
-  },
-  {
-    "objectID": "plan.html",
-    "href": "plan.html",
-    "title": "Plan de guerra",
-    "section": "",
-    "text": "Elaboración del Plan de Cuadros como parte del trabajo de planificación de análisis elaboramos nuestro primer PDC\nRepaso de procesamieno de datos básico\nSegmentar la población: en las clases trabajamos en ver cómo segmentar nuestra población de estudiantes\nEjercicios de gráficos\nAprendemos a organizar nuestro proyecto de investigación\nQuarto\nProyectos reproductibles con GitHub"
-  },
-  {
-    "objectID": "plan.html#procesamiento",
-    "href": "plan.html#procesamiento",
-    "title": "Plan de guerra",
-    "section": "",
-    "text": "Elaboración del Plan de Cuadros como parte del trabajo de planificación de análisis elaboramos nuestro primer PDC\nRepaso de procesamieno de datos básico\nSegmentar la población: en las clases trabajamos en ver cómo segmentar nuestra población de estudiantes\nEjercicios de gráficos\nAprendemos a organizar nuestro proyecto de investigación\nQuarto\nProyectos reproductibles con GitHub"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Sobreviviendo a la Tesis con R",
-    "section": "",
-    "text": "Este sitio reúne los materiales de trabajo utilizados durante las clases de R orientadas al desarrollo de la tesis de Daniel Acosta.\nEl objetivo es construir un flujo de trabajo reproducible para la gestión, procesamiento y análisis de datos, incorporando buenas prácticas de investigación y programación."
-  },
-  {
-    "objectID": "index.html#bienvenido",
-    "href": "index.html#bienvenido",
-    "title": "Sobreviviendo a la Tesis con R",
-    "section": "",
-    "text": "Este sitio reúne los materiales de trabajo utilizados durante las clases de R orientadas al desarrollo de la tesis de Daniel Acosta.\nEl objetivo es construir un flujo de trabajo reproducible para la gestión, procesamiento y análisis de datos, incorporando buenas prácticas de investigación y programación."
-  },
-  {
-    "objectID": "index.html#qué-encontrarás-aquí",
-    "href": "index.html#qué-encontrarás-aquí",
-    "title": "Sobreviviendo a la Tesis con R",
-    "section": "¿Qué encontrarás aquí?",
-    "text": "¿Qué encontrarás aquí?\n\n📚 Clases\nMateriales, ejercicios y ejemplos trabajados durante las clases.\n\n\n📊 Proyecto de tesis\nDocumentación del procesondefined de análisis, decisiones metodológicas y avances del proyecto.\n\n\n💻 Bases de ejemplo\nArchivos de práctica para experimentar con técnicas de limpieza, transformación y análisis de datos.\n\n\n🛠 Herramientas\nGuías, enlaces, paquetes de R y materiales complementarios.\n\n\n🎯Plan de guerra\n☑ Definición del problema\n☑ Recolección de datos\n☑ Organización de bases\n◐ Procesamiento\n□ Análisis\n□ Escritura\n□ Defensa"
+    "text": "En estas clases trabajamos en las múltiples formas de contar historias con gráficos con una librería clásica de R ggplot\nDescargar el script aquí"
   },
   {
     "objectID": "recursos.html",
@@ -84,11 +49,53 @@
     "text": "🔗 Sitios\n\nhttps://r-graph-gallery.com/ Una galería de gráficos de R con ggplot super completa"
   },
   {
-    "objectID": "clases/02_ejercicios_graficos.qmd.html",
-    "href": "clases/02_ejercicios_graficos.qmd.html",
-    "title": "Ejercicios de gráficos con ggplot",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sobreviviendo a la Tesis con R",
     "section": "",
-    "text": "En estas clases trabajamos en las múltiples formas de contar historias con gráficos con una librería clásica de R ggplot\nDescargar el script aquí"
+    "text": "Este sitio reúne los materiales de trabajo utilizados durante las clases de R orientadas al desarrollo de la tesis de Daniel Acosta.\nEl objetivo es construir un flujo de trabajo reproducible para la gestión, procesamiento y análisis de datos, incorporando buenas prácticas de investigación y programación."
+  },
+  {
+    "objectID": "index.html#bienvenido",
+    "href": "index.html#bienvenido",
+    "title": "Sobreviviendo a la Tesis con R",
+    "section": "",
+    "text": "Este sitio reúne los materiales de trabajo utilizados durante las clases de R orientadas al desarrollo de la tesis de Daniel Acosta.\nEl objetivo es construir un flujo de trabajo reproducible para la gestión, procesamiento y análisis de datos, incorporando buenas prácticas de investigación y programación."
+  },
+  {
+    "objectID": "index.html#qué-encontrarás-aquí",
+    "href": "index.html#qué-encontrarás-aquí",
+    "title": "Sobreviviendo a la Tesis con R",
+    "section": "¿Qué encontrarás aquí?",
+    "text": "¿Qué encontrarás aquí?\n\n📚 Clases\nMateriales, ejercicios y ejemplos trabajados durante las clases.\n\n\n📊 Proyecto de tesis\nDocumentación del procesondefined de análisis, decisiones metodológicas y avances del proyecto.\n\n\n💻 Bases de ejemplo\nArchivos de práctica para experimentar con técnicas de limpieza, transformación y análisis de datos.\n\n\n🛠 Herramientas\nGuías, enlaces, paquetes de R y materiales complementarios.\n\n\n🎯Plan de guerra\n☑ Definición del problema\n☑ Recolección de datos\n☑ Organización de bases\n◐ Procesamiento\n□ Análisis\n□ Escritura\n□ Defensa"
+  },
+  {
+    "objectID": "plan.html",
+    "href": "plan.html",
+    "title": "Plan de guerra",
+    "section": "",
+    "text": "Elaboración del Plan de Cuadros como parte del trabajo de planificación de análisis elaboramos nuestro primer PDC\nRepaso de procesamieno de datos básico\nSegmentar la población: en las clases trabajamos en ver cómo segmentar nuestra población de estudiantes\nEjercicios de gráficos\nAprendemos a organizar nuestro proyecto de investigación\nQuarto\nProyectos reproductibles con GitHub"
+  },
+  {
+    "objectID": "plan.html#procesamiento",
+    "href": "plan.html#procesamiento",
+    "title": "Plan de guerra",
+    "section": "",
+    "text": "Elaboración del Plan de Cuadros como parte del trabajo de planificación de análisis elaboramos nuestro primer PDC\nRepaso de procesamieno de datos básico\nSegmentar la población: en las clases trabajamos en ver cómo segmentar nuestra población de estudiantes\nEjercicios de gráficos\nAprendemos a organizar nuestro proyecto de investigación\nQuarto\nProyectos reproductibles con GitHub"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sobre este sitio",
+    "section": "",
+    "text": "Notebooks, scripts, bases de datos y decisiones metodológicas para llegar vivo a la defensa."
+  },
+  {
+    "objectID": "clases/01_ejercicios_segmentacion.html",
+    "href": "clases/01_ejercicios_segmentacion.html",
+    "title": "Ejercicios de segmentación",
+    "section": "",
+    "text": "En estas clases trabajamos en el proceso de una segmentación inicial del universo de alumnos en función de su trayectoria\nDescargar el script aquí"
   },
   {
     "objectID": "clases/03_workflows.html",
