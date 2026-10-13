@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "clases/00_manipulacion_datos.html",
+    "href": "clases/00_manipulacion_datos.html",
+    "title": "Manipulacion de datos",
+    "section": "",
+    "text": "En esta clase trabajamos los elementos básicos de manipulación de datos con r\nDescargar el script aqui"
+  },
+  {
+    "objectID": "clases/01_ejercicios_segmentacion.html",
+    "href": "clases/01_ejercicios_segmentacion.html",
+    "title": "Ejercicios de segmentación",
+    "section": "",
+    "text": "En estas clases trabajamos en el proceso de una segmentación inicial del universo de alumnos en función de su trayectoria\nDescargar el script aquí"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sobre este sitio",
+    "section": "",
+    "text": "Notebooks, scripts, bases de datos y decisiones metodológicas para llegar vivo a la defensa."
+  },
+  {
+    "objectID": "plan.html",
+    "href": "plan.html",
+    "title": "Plan de guerra",
+    "section": "",
+    "text": "Elaboración del Plan de Cuadros como parte del trabajo de planificación de análisis elaboramos nuestro primer PDC\nRepaso de procesamieno de datos básico\nSegmentar la población: en las clases trabajamos en ver cómo segmentar nuestra población de estudiantes\nEjercicios de gráficos\nAprendemos a organizar nuestro proyecto de investigación\nQuarto\nProyectos reproductibles con GitHub"
+  },
+  {
+    "objectID": "plan.html#procesamiento",
+    "href": "plan.html#procesamiento",
+    "title": "Plan de guerra",
+    "section": "",
+    "text": "Elaboración del Plan de Cuadros como parte del trabajo de planificación de análisis elaboramos nuestro primer PDC\nRepaso de procesamieno de datos básico\nSegmentar la población: en las clases trabajamos en ver cómo segmentar nuestra población de estudiantes\nEjercicios de gráficos\nAprendemos a organizar nuestro proyecto de investigación\nQuarto\nProyectos reproductibles con GitHub"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Sobreviviendo a la Tesis con R",
@@ -49,34 +84,6 @@
     "text": "🔗 Sitios\n\nhttps://r-graph-gallery.com/ Una galería de gráficos de R con ggplot super completa"
   },
   {
-    "objectID": "clases/03_workflows.html",
-    "href": "clases/03_workflows.html",
-    "title": "Workflows de trabajo en R",
-    "section": "",
-    "text": "En esta clase empezamos a pensar los proyectos de R como un conjunto de diferenets archivos y carpetas que dialogan.\nDescaraga la estructura de carpeta aquí"
-  },
-  {
-    "objectID": "clases/01_ejercicios_segmentacion.html",
-    "href": "clases/01_ejercicios_segmentacion.html",
-    "title": "Ejercicios de segmentación",
-    "section": "",
-    "text": "En estas clases trabajamos en el proceso de una segmentación inicial del universo de alumnos en función de su trayectoria\nDescargar el script aquí"
-  },
-  {
-    "objectID": "plan.html",
-    "href": "plan.html",
-    "title": "Plan de guerra",
-    "section": "",
-    "text": "Elaboración del Plan de Cuadros como parte del trabajo de planificación de análisis elaboramos nuestro primer PDC\nRepaso de procesamieno de datos básico\nSegmentar la población: en las clases trabajamos en ver cómo segmentar nuestra población de estudiantes\nEjercicios de gráficos\nAprendemos a organizar nuestro proyecto de investigación\nQuarto\nProyectos reproductibles con GitHub"
-  },
-  {
-    "objectID": "plan.html#procesamiento",
-    "href": "plan.html#procesamiento",
-    "title": "Plan de guerra",
-    "section": "",
-    "text": "Elaboración del Plan de Cuadros como parte del trabajo de planificación de análisis elaboramos nuestro primer PDC\nRepaso de procesamieno de datos básico\nSegmentar la población: en las clases trabajamos en ver cómo segmentar nuestra población de estudiantes\nEjercicios de gráficos\nAprendemos a organizar nuestro proyecto de investigación\nQuarto\nProyectos reproductibles con GitHub"
-  },
-  {
     "objectID": "clases/02_ejercicios_graficos.qmd.html",
     "href": "clases/02_ejercicios_graficos.qmd.html",
     "title": "Ejercicios de gráficos con ggplot",
@@ -84,17 +91,10 @@
     "text": "En estas clases trabajamos en las múltiples formas de contar historias con gráficos con una librería clásica de R ggplot\nDescargar el script aquí"
   },
   {
-    "objectID": "clases/00_manipulacion_datos.html",
-    "href": "clases/00_manipulacion_datos.html",
-    "title": "Manipulacion de datos",
+    "objectID": "clases/03_workflows.html",
+    "href": "clases/03_workflows.html",
+    "title": "Workflows de trabajo en R",
     "section": "",
-    "text": "En esta clase trabajamos los elementos básicos de manipulación de datos con r\nDescargar el script aqui"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Sobre este sitio",
-    "section": "",
-    "text": "Notebooks, scripts, bases de datos y decisiones metodológicas para llegar vivo a la defensa."
+    "text": "En esta clase empezamos a pensar los proyectos de R como un conjunto de diferenets archivos y carpetas que dialogan.\nDescaraga la estructura de carpeta aquí"
   }
 ]
