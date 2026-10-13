@@ -19,6 +19,8 @@ website:
             text: Ejercicios Graficos 
           - href: clases/03_workflows.qmd
             text: Workflows
+          - href: clases/03_ejercicios_descripcion_muestra.qmd
+            text: Describir la muestra
       - href: recursos.qmd
         text: Recursos
 

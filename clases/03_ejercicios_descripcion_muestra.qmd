@@ -1,0 +1,8 @@
+---
+title: "03_ejercicios_descripcion_muestra"
+format: html
+---
+
+En esta clase retomamos la tarea de hacer una descripción de la muestra.
+
+Descargar el script [aquí]("https://github.com/BetsyCohen/clases_daniel_acosta/blob/main/clases/03_ejercicios_descripcion_muestra.R")
