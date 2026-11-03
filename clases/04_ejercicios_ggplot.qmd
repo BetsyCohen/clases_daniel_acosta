@@ -1,0 +1,136 @@
+---
+title: "Graficos y tablas para tesis"
+format: html
+---
+
+```{r}
+#| label: setup
+#| echo: false
+#| warning: false
+
+# liberias ---
+
+library(dplyr)
+library(ggplot2)
+
+
+# Base
+df <-  readRDS("D:/clases-r-daniel/input/base_2024_final_anoni1 (3).rds") |> 
+  janitor::clean_names() |> 
+  filter(carrera == "1- Sociología")
+
+anio_encuesta <- 2024
+duracion_carrera <- 5
+
+
+df <- df |> 
+  mutate(
+    segmentos = case_when(
+      p48 == "1- Soy graduadx o entregué la tesina y estoy esperando fecha de defensa" ~ "ETT",
+      p48 == "2-Soy estudiante" & p27 < anio_encuesta - duracion_carrera ~ "ETE",
+      p48 ==  "2-Soy estudiante" & p27 >= anio_encuesta - duracion_carrera   ~ "ETR",
+      TRUE ~ "Otra situación" )
+  ) 
+
+```
+
+
+
+## Tabla 1 - segmentos según edad agrupada
+
+### Paso 1: creo la tabla de resumen
+
+
+```{r}
+segmentos_edad <- df |> 
+  group_by(segmentos,edad_r) |> 
+  summarise(estudiantes_n = n_distinct(id)) |> 
+  mutate(estudiantes_prop = round(estudiantes_n/sum(estudiantes_n)*100,1)) 
+
+head(segmentos_edad)
+```
+
+### Paso 2: me ayudo con esquisser a armar el gráfico llamando a `esquisser(segmentos_edad)`
+
+### Paso 3: edito el código y le cambio otras cosas. por ej. acá le agregamos otro geom. Hago una lectura línea por línea para incorporar los conceptos que me ayudó a escribir esquiesser
+
+```{r}
+ggplot(segmentos_edad) +
+ aes(x = segmentos, y = estudiantes_prop, fill = edad_r) + # 👈 estructura general
+ geom_col() + # 👈 geometría elegida
+ scale_fill_hue(direction = -1) + # 👈 dirección del color
+ labs(x = " ", # 👈 Etiquetas del cuerpo del gráfico
+      y = "%", 
+      title = "Estudiantes según segmento y edad", 
+      caption = "Base: total estudiantes (99). Fuente: relevamiento ....",
+      fill = "Edades") +
+  geom_text( # 👈 Agreho una nueva geometría de texto para ponerle los valores de cada categ.
+    label = segmentos_edad$estudiantes_prop,
+    position = position_stack(vjust = 0.5),
+    size = 4)+
+ theme_light()
+```
+
+### Paso 4: Replico el código por otras variables categóricas de de mi interés
+
+Primero creo la tabla...
+
+```{r}
+segmentos_hijos_menores <- df |> 
+  mutate(p06 = if_else(p06 == "1- Sí", "Sí","No")) |> # transformacion previa de las etiquetas
+  group_by(segmentos,p06) |> 
+  summarise(estudiantes_n = n_distinct(id)) |> 
+  mutate(estudiantes_prop = round(estudiantes_n/sum(estudiantes_n)*100,1)) 
+
+head(segmentos_hijos_menores)
+```
+
+y luego copio y Hago el gráfico cambiando la fuente y variable de relleno (`fill`)
+
+```{r}
+ggplot(segmentos_hijos_menores) +  # 👈 cambio la tabla
+  aes(x = segmentos, y = estudiantes_prop, fill = p06) + # 👈 cambio el fill
+  geom_col() +
+  scale_fill_hue(direction = -1) +
+  labs(x = " ", 
+       y = "%", 
+       title = "Estudiantes según segmento e hijos", #👈 cambio el títilo y el fill
+       caption = "Base: total estudiantes (99). Fuente: relevamiento ....",
+       fill = "¿Tiene Hijos?") +
+  geom_text(
+    label = segmentos_hijos_menores$estudiantes_prop,# 👈 cambio la tabla
+    position = position_stack(vjust = 0.5),
+    size = 4)+
+  theme_light()
+```
+
+
+### Combinar dos valores en `geom_text()` con `paste0()`
+Otra opción del gráfico con N en vez de porcentaje y dejo los porcentaje como parte de la etiqueta
+
+
+```{r}
+ggplot(segmentos_hijos_menores) +  
+  aes(x = segmentos, y = estudiantes_n, fill = p06) + # 👈 ponemos el N en el eje Y
+  geom_col() +
+  scale_fill_hue(direction = -1) +
+  labs(x = " ", 
+       y = "%", 
+       title = "Estudiantes según segmento e hijos", 
+       caption = "Base: total estudiantes (99). Fuente: relevamiento ....",
+       fill = "¿Tiene Hijos?") +
+  geom_text(
+    #👈 en la etiqueta combinamos con paste los dos valores de la tabla
+    label = paste0(
+      segmentos_hijos_menores$estudiantes_prop,
+      "%",
+      "(",
+      segmentos_hijos_menores$estudiantes_n,
+      ")"),
+    
+    position = position_stack(vjust = 0.5),
+    size = 4)+
+  
+  theme_light()
+```
+

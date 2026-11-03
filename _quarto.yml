@@ -21,6 +21,8 @@ website:
             text: Workflows
           - href: clases/03_ejercicios_descripcion_muestra.qmd
             text: Describir la muestra
+          - href: clases/04_ejercicios_ggplot.qmd
+            text: Ejercicios ggplot
       - href: recursos.qmd
         text: Recursos
 
