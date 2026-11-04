@@ -1,24 +1,10 @@
 [
   {
-    "objectID": "clases/00_manipulacion_datos.html",
-    "href": "clases/00_manipulacion_datos.html",
-    "title": "Manipulacion de datos",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sobre este sitio",
     "section": "",
-    "text": "En esta clase trabajamos los elementos básicos de manipulación de datos con r\nDescargar el script aqui"
-  },
-  {
-    "objectID": "clases/03_ejercicios_descripcion_muestra.html",
-    "href": "clases/03_ejercicios_descripcion_muestra.html",
-    "title": "03_ejercicios_descripcion_muestra",
-    "section": "",
-    "text": "En esta clase retomamos la tarea de hacer una descripción de la muestra.\nDescargar el script aquí"
-  },
-  {
-    "objectID": "clases/02_ejercicios_graficos.qmd.html",
-    "href": "clases/02_ejercicios_graficos.qmd.html",
-    "title": "Ejercicios de gráficos con ggplot",
-    "section": "",
-    "text": "En estas clases trabajamos en las múltiples formas de contar historias con gráficos con una librería clásica de R ggplot\nDescargar el script aquí"
+    "text": "Notebooks, scripts, bases de datos y decisiones metodológicas para llegar vivo a la defensa."
   },
   {
     "objectID": "recursos.html",
@@ -47,6 +33,55 @@
     "title": "Recursos",
     "section": "🔗 Sitios",
     "text": "🔗 Sitios\n\nhttps://r-graph-gallery.com/ Una galería de gráficos de R con ggplot super completa"
+  },
+  {
+    "objectID": "clases/01_ejercicios_segmentacion.html",
+    "href": "clases/01_ejercicios_segmentacion.html",
+    "title": "Ejercicios de segmentación",
+    "section": "",
+    "text": "En estas clases trabajamos en el proceso de una segmentación inicial del universo de alumnos en función de su trayectoria\nDescargar el script aquí"
+  },
+  {
+    "objectID": "clases/00_manipulacion_datos.html",
+    "href": "clases/00_manipulacion_datos.html",
+    "title": "Manipulacion de datos",
+    "section": "",
+    "text": "En esta clase trabajamos los elementos básicos de manipulación de datos con r\nDescargar el script aqui"
+  },
+  {
+    "objectID": "clases/03_workflows.html",
+    "href": "clases/03_workflows.html",
+    "title": "Workflows de trabajo en R",
+    "section": "",
+    "text": "En esta clase empezamos a pensar los proyectos de R como un conjunto de diferenets archivos y carpetas que dialogan.\nDescaraga la estructura de carpeta aquí"
+  },
+  {
+    "objectID": "clases/04_ejercicios_ggplot.html",
+    "href": "clases/04_ejercicios_ggplot.html",
+    "title": "Graficos y tablas para tesis",
+    "section": "",
+    "text": "segmentos_edad &lt;- df |&gt; \n  group_by(segmentos,edad_r) |&gt; \n  summarise(estudiantes_n = n_distinct(id)) |&gt; \n  mutate(estudiantes_prop = round(estudiantes_n/sum(estudiantes_n)*100,1)) \n\n`summarise()` has regrouped the output.\nℹ Summaries were computed grouped by segmentos and edad_r.\nℹ Output is grouped by segmentos.\nℹ Use `summarise(.groups = \"drop_last\")` to silence this message.\nℹ Use `summarise(.by = c(segmentos, edad_r))` for per-operation grouping\n  (`?dplyr::dplyr_by`) instead.\n\nhead(segmentos_edad)\n\n# A tibble: 6 × 4\n# Groups:   segmentos [1]\n  segmentos edad_r             estudiantes_n estudiantes_prop\n  &lt;chr&gt;     &lt;chr&gt;                      &lt;int&gt;            &lt;dbl&gt;\n1 ETE       1- De 21 a 25 años             2              4.5\n2 ETE       2- De 26 a 30 años            14             31.8\n3 ETE       3- De 31 a 35 años             9             20.5\n4 ETE       4- De 36 a 45 años            12             27.3\n5 ETE       5- De 46 a 55 años             3              6.8\n6 ETE       6- Mayor a 55 años             4              9.1\n\n\n\n\n\n\n\n\n\nggplot(segmentos_edad) +\n aes(x = segmentos, y = estudiantes_prop, fill = edad_r) + # 👈 estructura general\n geom_col() + # 👈 geometría elegida\n scale_fill_hue(direction = -1) + # 👈 dirección del color\n labs(x = \" \", # 👈 Etiquetas del cuerpo del gráfico\n      y = \"%\", \n      title = \"Estudiantes según segmento y edad\", \n      caption = \"Base: total estudiantes (99). Fuente: relevamiento ....\",\n      fill = \"Edades\") +\n  geom_text( # 👈 Agreho una nueva geometría de texto para ponerle los valores de cada categ.\n    label = segmentos_edad$estudiantes_prop,\n    position = position_stack(vjust = 0.5),\n    size = 4)+\n theme_light()\n\n\n\n\n\n\n\n\n\n\n\nPrimero creo la tabla…\n\nsegmentos_hijos_menores &lt;- df |&gt; \n  mutate(p06 = if_else(p06 == \"1- Sí\", \"Sí\",\"No\")) |&gt; # transformacion previa de las etiquetas\n  group_by(segmentos,p06) |&gt; \n  summarise(estudiantes_n = n_distinct(id)) |&gt; \n  mutate(estudiantes_prop = round(estudiantes_n/sum(estudiantes_n)*100,1)) \n\n`summarise()` has regrouped the output.\nℹ Summaries were computed grouped by segmentos and p06.\nℹ Output is grouped by segmentos.\nℹ Use `summarise(.groups = \"drop_last\")` to silence this message.\nℹ Use `summarise(.by = c(segmentos, p06))` for per-operation grouping\n  (`?dplyr::dplyr_by`) instead.\n\nhead(segmentos_hijos_menores)\n\n# A tibble: 6 × 4\n# Groups:   segmentos [3]\n  segmentos p06   estudiantes_n estudiantes_prop\n  &lt;chr&gt;     &lt;chr&gt;         &lt;int&gt;            &lt;dbl&gt;\n1 ETE       No               29             65.9\n2 ETE       Sí               15             34.1\n3 ETR       No               34             94.4\n4 ETR       Sí                2              5.6\n5 ETT       No               16             84.2\n6 ETT       Sí                3             15.8\n\n\ny luego copio y Hago el gráfico cambiando la fuente y variable de relleno (fill)\n\nggplot(segmentos_hijos_menores) +  # 👈 cambio la tabla\n  aes(x = segmentos, y = estudiantes_prop, fill = p06) + # 👈 cambio el fill\n  geom_col() +\n  scale_fill_hue(direction = -1) +\n  labs(x = \" \", \n       y = \"%\", \n       title = \"Estudiantes según segmento e hijos\", #👈 cambio el títilo y el fill\n       caption = \"Base: total estudiantes (99). Fuente: relevamiento ....\",\n       fill = \"¿Tiene Hijos?\") +\n  geom_text(\n    label = segmentos_hijos_menores$estudiantes_prop,# 👈 cambio la tabla\n    position = position_stack(vjust = 0.5),\n    size = 4)+\n  theme_light()\n\n\n\n\n\n\n\n\n\n\n\nOtra opción del gráfico con N en vez de porcentaje y dejo los porcentaje como parte de la etiqueta\n\nggplot(segmentos_hijos_menores) +  \n  aes(x = segmentos, y = estudiantes_n, fill = p06) + # 👈 ponemos el N en el eje Y\n  geom_col() +\n  scale_fill_hue(direction = -1) +\n  labs(x = \" \", \n       y = \"%\", \n       title = \"Estudiantes según segmento e hijos\", \n       caption = \"Base: total estudiantes (99). Fuente: relevamiento ....\",\n       fill = \"¿Tiene Hijos?\") +\n  geom_text(\n    #👈 en la etiqueta combinamos con paste los dos valores de la tabla\n    label = paste0(\n      segmentos_hijos_menores$estudiantes_prop,\n      \"%\",\n      \"(\",\n      segmentos_hijos_menores$estudiantes_n,\n      \")\"),\n    \n    position = position_stack(vjust = 0.5),\n    size = 4)+\n  \n  theme_light()"
+  },
+  {
+    "objectID": "clases/04_ejercicios_ggplot.html#tabla-1---segmentos-según-edad-agrupada",
+    "href": "clases/04_ejercicios_ggplot.html#tabla-1---segmentos-según-edad-agrupada",
+    "title": "Graficos y tablas para tesis",
+    "section": "",
+    "text": "segmentos_edad &lt;- df |&gt; \n  group_by(segmentos,edad_r) |&gt; \n  summarise(estudiantes_n = n_distinct(id)) |&gt; \n  mutate(estudiantes_prop = round(estudiantes_n/sum(estudiantes_n)*100,1)) \n\n`summarise()` has regrouped the output.\nℹ Summaries were computed grouped by segmentos and edad_r.\nℹ Output is grouped by segmentos.\nℹ Use `summarise(.groups = \"drop_last\")` to silence this message.\nℹ Use `summarise(.by = c(segmentos, edad_r))` for per-operation grouping\n  (`?dplyr::dplyr_by`) instead.\n\nhead(segmentos_edad)\n\n# A tibble: 6 × 4\n# Groups:   segmentos [1]\n  segmentos edad_r             estudiantes_n estudiantes_prop\n  &lt;chr&gt;     &lt;chr&gt;                      &lt;int&gt;            &lt;dbl&gt;\n1 ETE       1- De 21 a 25 años             2              4.5\n2 ETE       2- De 26 a 30 años            14             31.8\n3 ETE       3- De 31 a 35 años             9             20.5\n4 ETE       4- De 36 a 45 años            12             27.3\n5 ETE       5- De 46 a 55 años             3              6.8\n6 ETE       6- Mayor a 55 años             4              9.1\n\n\n\n\n\n\n\n\n\nggplot(segmentos_edad) +\n aes(x = segmentos, y = estudiantes_prop, fill = edad_r) + # 👈 estructura general\n geom_col() + # 👈 geometría elegida\n scale_fill_hue(direction = -1) + # 👈 dirección del color\n labs(x = \" \", # 👈 Etiquetas del cuerpo del gráfico\n      y = \"%\", \n      title = \"Estudiantes según segmento y edad\", \n      caption = \"Base: total estudiantes (99). Fuente: relevamiento ....\",\n      fill = \"Edades\") +\n  geom_text( # 👈 Agreho una nueva geometría de texto para ponerle los valores de cada categ.\n    label = segmentos_edad$estudiantes_prop,\n    position = position_stack(vjust = 0.5),\n    size = 4)+\n theme_light()\n\n\n\n\n\n\n\n\n\n\n\nPrimero creo la tabla…\n\nsegmentos_hijos_menores &lt;- df |&gt; \n  mutate(p06 = if_else(p06 == \"1- Sí\", \"Sí\",\"No\")) |&gt; # transformacion previa de las etiquetas\n  group_by(segmentos,p06) |&gt; \n  summarise(estudiantes_n = n_distinct(id)) |&gt; \n  mutate(estudiantes_prop = round(estudiantes_n/sum(estudiantes_n)*100,1)) \n\n`summarise()` has regrouped the output.\nℹ Summaries were computed grouped by segmentos and p06.\nℹ Output is grouped by segmentos.\nℹ Use `summarise(.groups = \"drop_last\")` to silence this message.\nℹ Use `summarise(.by = c(segmentos, p06))` for per-operation grouping\n  (`?dplyr::dplyr_by`) instead.\n\nhead(segmentos_hijos_menores)\n\n# A tibble: 6 × 4\n# Groups:   segmentos [3]\n  segmentos p06   estudiantes_n estudiantes_prop\n  &lt;chr&gt;     &lt;chr&gt;         &lt;int&gt;            &lt;dbl&gt;\n1 ETE       No               29             65.9\n2 ETE       Sí               15             34.1\n3 ETR       No               34             94.4\n4 ETR       Sí                2              5.6\n5 ETT       No               16             84.2\n6 ETT       Sí                3             15.8\n\n\ny luego copio y Hago el gráfico cambiando la fuente y variable de relleno (fill)\n\nggplot(segmentos_hijos_menores) +  # 👈 cambio la tabla\n  aes(x = segmentos, y = estudiantes_prop, fill = p06) + # 👈 cambio el fill\n  geom_col() +\n  scale_fill_hue(direction = -1) +\n  labs(x = \" \", \n       y = \"%\", \n       title = \"Estudiantes según segmento e hijos\", #👈 cambio el títilo y el fill\n       caption = \"Base: total estudiantes (99). Fuente: relevamiento ....\",\n       fill = \"¿Tiene Hijos?\") +\n  geom_text(\n    label = segmentos_hijos_menores$estudiantes_prop,# 👈 cambio la tabla\n    position = position_stack(vjust = 0.5),\n    size = 4)+\n  theme_light()\n\n\n\n\n\n\n\n\n\n\n\nOtra opción del gráfico con N en vez de porcentaje y dejo los porcentaje como parte de la etiqueta\n\nggplot(segmentos_hijos_menores) +  \n  aes(x = segmentos, y = estudiantes_n, fill = p06) + # 👈 ponemos el N en el eje Y\n  geom_col() +\n  scale_fill_hue(direction = -1) +\n  labs(x = \" \", \n       y = \"%\", \n       title = \"Estudiantes según segmento e hijos\", \n       caption = \"Base: total estudiantes (99). Fuente: relevamiento ....\",\n       fill = \"¿Tiene Hijos?\") +\n  geom_text(\n    #👈 en la etiqueta combinamos con paste los dos valores de la tabla\n    label = paste0(\n      segmentos_hijos_menores$estudiantes_prop,\n      \"%\",\n      \"(\",\n      segmentos_hijos_menores$estudiantes_n,\n      \")\"),\n    \n    position = position_stack(vjust = 0.5),\n    size = 4)+\n  \n  theme_light()"
+  },
+  {
+    "objectID": "clases/03_ejercicios_descripcion_muestra.html",
+    "href": "clases/03_ejercicios_descripcion_muestra.html",
+    "title": "03_ejercicios_descripcion_muestra",
+    "section": "",
+    "text": "En esta clase retomamos la tarea de hacer una descripción de la muestra.\nDescargar el script aquí"
+  },
+  {
+    "objectID": "clases/02_ejercicios_graficos.qmd.html",
+    "href": "clases/02_ejercicios_graficos.qmd.html",
+    "title": "Ejercicios de gráficos con ggplot",
+    "section": "",
+    "text": "En estas clases trabajamos en las múltiples formas de contar historias con gráficos con una librería clásica de R ggplot\nDescargar el script aquí"
   },
   {
     "objectID": "index.html",
@@ -82,26 +117,5 @@
     "title": "Plan de guerra",
     "section": "",
     "text": "Elaboración del Plan de Cuadros como parte del trabajo de planificación de análisis elaboramos nuestro primer PDC\nRepaso de procesamieno de datos básico\nSegmentar la población: en las clases trabajamos en ver cómo segmentar nuestra población de estudiantes\nEjercicios de gráficos\nAprendemos a organizar nuestro proyecto de investigación\nQuarto\nProyectos reproductibles con GitHub"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Sobre este sitio",
-    "section": "",
-    "text": "Notebooks, scripts, bases de datos y decisiones metodológicas para llegar vivo a la defensa."
-  },
-  {
-    "objectID": "clases/01_ejercicios_segmentacion.html",
-    "href": "clases/01_ejercicios_segmentacion.html",
-    "title": "Ejercicios de segmentación",
-    "section": "",
-    "text": "En estas clases trabajamos en el proceso de una segmentación inicial del universo de alumnos en función de su trayectoria\nDescargar el script aquí"
-  },
-  {
-    "objectID": "clases/03_workflows.html",
-    "href": "clases/03_workflows.html",
-    "title": "Workflows de trabajo en R",
-    "section": "",
-    "text": "En esta clase empezamos a pensar los proyectos de R como un conjunto de diferenets archivos y carpetas que dialogan.\nDescaraga la estructura de carpeta aquí"
   }
 ]
