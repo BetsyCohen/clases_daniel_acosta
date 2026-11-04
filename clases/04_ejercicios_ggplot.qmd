@@ -15,7 +15,7 @@ library(ggplot2)
 
 
 # Base
-df <-  readRDS("D:/clases_daniel_acosta/input/base_2024_final_anoni1 (3).rds") |> 
+df <-  readRDS("../input/base_2024_final_anoni1 (3).rds") |> 
   janitor::clean_names() |> 
   filter(carrera == "1- Sociología")
 
