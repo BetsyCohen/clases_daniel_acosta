@@ -12,12 +12,19 @@ format: html
 
 library(dplyr)
 library(ggplot2)
+library(here)
+
+df <- readRDS(
+  here("input", "base_2024_final_anoni1 (3).rds")
+) |> 
+janitor::clean_names() |> 
+filter(carrera == "1- Sociología")
 
 
-# Base
-df <-  readRDS("../input/base_2024_final_anoni1 (3).rds") |> 
-  janitor::clean_names() |> 
-  filter(carrera == "1- Sociología")
+# # Base
+# df <-  readRDS("../input/base_2024_final_anoni1 (3).rds") |> 
+#   janitor::clean_names() |> 
+#   filter(carrera == "1- Sociología")
 
 anio_encuesta <- 2024
 duracion_carrera <- 5
