@@ -134,3 +134,227 @@ ggplot(segmentos_hijos_menores) +
   theme_light()
 ```
 
+### Tunenado el gráfico
+
+```{r}
+library(showtext)
+
+font_add_google("Bebas Neue")
+font_add_google("Roboto")
+
+showtext_auto()
+
+
+theme_dani <- function() {
+  titles_font_family <- "Bebas Neue"
+  base_font_family <- "Roboto"
+
+  theme_minimal() +
+    theme(
+      # Leyenda
+      legend.position = "bottom",
+      legend.text = element_text(family = base_font_family),
+      legend.title = element_text(family = titles_font_family),
+
+      # Grid
+      panel.grid.major = element_line(linewidth = 0.25, color = "#F3F3F3"),
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.spacing = unit(0.75, "lines"),
+      panel.background = element_rect(fill = "transparent", color = "transparent"),
+
+      # Ejes
+      axis.title = element_text(family = titles_font_family),
+      axis.text = element_text(family = base_font_family),
+
+      # Facetas
+      strip.text = element_text(family = titles_font_family, hjust = 0, color = "white", size = 12),
+      strip.background = element_rect(fill = "black"),
+
+      # Texto
+      text = element_text(family = base_font_family, size = 10, color = "black"),
+
+      # Aspectos principales
+      plot.title = element_text(family = titles_font_family, size = 30),
+      plot.subtitle = element_text(family = titles_font_family, color = "#8a8a8a", size = 15),
+      plot.caption = element_text(family = titles_font_family),
+      plot.background = element_rect(fill = "transparent", color = "transparent")
+    )
+}
+```
+
+aplicamos el theme robado en nuestro gráfico
+
+```{r}
+ggplot(segmentos_hijos_menores) +  
+  aes(x = segmentos, y = estudiantes_n, fill = p06) + # 👈 ponemos el N en el eje Y
+  geom_col() +
+  scale_fill_hue(direction = -1) +
+  labs(x = " ", 
+       y = "%", 
+       title = "Estudiantes según segmento e hijos", 
+       caption = "Base: total estudiantes (99). Fuente: relevamiento ....",
+       fill = "¿Tiene Hijos?") +
+  geom_text(
+    #👈 en la etiqueta combinamos con paste los dos valores de la tabla
+    label = paste0(
+      segmentos_hijos_menores$estudiantes_prop,
+      "%",
+      "(",
+      segmentos_hijos_menores$estudiantes_n,
+      ")"),
+    
+    position = position_stack(vjust = 0.5),
+    size = 4)+
+  theme_dani() # 👈 Cambio el theme
+```
+
+### Un theme de la UNSAM
+
+Para nuestro `theme_unsam` vamos a usar como referencia la página oficial de [identidad visual](https://unsam.edu.ar/grafica/) 
+
+
+Nos instalamos las fuentes
+
+```{r}
+font_add_google("Saira")
+font_add_google("Faustina")
+```
+
+
+
+Ahora le pedimos a La IA que haga su magia...
+
+```{r}
+
+theme_unsam <- function(base_size = 12) {
+
+  theme_minimal(
+    base_size = base_size,
+    base_family = "Faustina"
+  ) +
+
+    theme(
+
+      # Títulos
+      plot.title = element_text(
+        family = "Saira",
+        face = "bold",
+        size = rel(1.5),
+        color = "black",
+        margin = margin(b = 8)
+      ),
+
+      plot.subtitle = element_text(
+        family = "Faustina",
+        size = rel(1.05),
+        color = "black",
+        margin = margin(b = 12)
+      ),
+
+      plot.caption = element_text(
+        family = "Faustina",
+        size = rel(0.8),
+        color = "black",
+        hjust = 0,
+        margin = margin(t = 12)
+      ),
+
+      # Ejes
+      axis.title = element_text(
+        family = "Saira",
+        face = "bold",
+        color = "black"
+      ),
+
+      axis.text = element_text(
+        family = "Faustina",
+        color = "black"
+      ),
+
+      axis.ticks = element_blank(),
+
+      # Grillas
+      panel.grid.major.x = element_blank(),
+
+      panel.grid.major.y = element_line(
+        color = "#E8E8E8",
+        linewidth = 0.4
+      ),
+
+      panel.grid.minor = element_blank(),
+
+      # Leyendas
+      legend.title = element_text(
+        family = "Saira",
+        face = "bold",
+        color = "black"
+      ),
+
+      legend.text = element_text(
+        family = "Faustina",
+        color = "black"
+      ),
+
+      legend.position = "bottom",
+
+      # Facetas (en caso que usemos)
+      strip.text = element_text(
+        family = "Saira",
+        face = "bold",
+        color = "black"
+      ),
+
+      strip.background = element_rect(
+        fill = "#F2F2F2",
+        color = NA
+      ),
+
+      # Fondo
+      panel.background = element_rect(
+        fill = "white",
+        color = NA
+      ),
+
+      plot.background = element_rect(
+        fill = "white",
+        color = NA
+      ),
+
+      # Márgenes
+      plot.margin = margin(15, 18, 15, 18)
+    )
+}
+
+```
+
+
+aplicamos el theme y que soporten!
+
+```{r}
+ggplot(segmentos_hijos_menores) +  
+  aes(x = segmentos, y = estudiantes_n, fill = p06) + 
+  geom_col() +
+  scale_fill_manual(
+    values = c(
+      "No" = "#6A4DE0",
+      "Sí" = "#25833F"
+    )
+  ) +
+  labs(
+    x = " ",
+    y = "%",
+    title = "Estudiantes según segmento e hijos",
+    caption = "Base: total estudiantes (99). Fuente: relevamiento ....",
+    fill = "¿Tiene hijos?"
+  ) +
+  geom_text(
+    aes(label = paste0(estudiantes_prop, "% (", estudiantes_n, ")")),
+    position = position_stack(vjust = 0.5),
+    size = 8
+  ) +
+  theme_unsam()
+
+
+```
+
