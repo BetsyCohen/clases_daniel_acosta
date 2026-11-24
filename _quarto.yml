@@ -23,6 +23,10 @@ website:
             text: Describir la muestra
           - href: clases/04_ejercicios_ggplot.qmd
             text: Ejercicios ggplot
+          - href: clases/05_graficos_theme_unsam.qmd
+            text: Ejercicios ggplot theme unsam
+          - href: 06_facetado_en_ggplot.qmd
+            text: Facetado con ggplot
       - href: recursos.qmd
         text: Recursos
 
