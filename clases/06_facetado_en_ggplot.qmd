@@ -156,6 +156,8 @@ theme_unsam <- function(base_size = 12) {
 Nivel educativo de la madre
 
 ```{r}
+#| label: tbl_madre
+#| warning: false
 
 tabla_niv_educ_madre <- df |> 
   mutate(
@@ -193,6 +195,8 @@ tabla_niv_educ_madre <- df |>
 y lo mismo para el padre
 
 ```{r}
+#| label: tbl_padre
+#| warning: false
 
 
 tabla_niv_educ_padre <- df |> 
@@ -239,6 +243,8 @@ Unimos ambas tablas usando `bind_rows()` siempre tienen que tener el mismo tipo 
 
 
 ```{r}
+#| label: tbl_mapadre
+#| warning: false
 
 tabla_niv_educ_mapadre <- bind_rows(
   tabla_niv_educ_madre,
@@ -251,6 +257,9 @@ tabla_niv_educ_mapadre <- bind_rows(
 Construimos las etiquetas
 
 ```{r}
+#| label: crear_labels
+#| warning: false
+
 tabla_niv_educ_mapadre <- tabla_niv_educ_mapadre |> 
   mutate(etiqueta = paste0(estudiantes_prop,"%","\n(",estudiantes_n,")"))
 ```
@@ -261,6 +270,10 @@ Construimos el gráfico
 
 
 ```{r}
+#| label: fig_mapadre
+#| warning: false
+
+
 ggplot(
   tabla_niv_educ_mapadre,
   aes(x = segmentos,y = estudiantes_prop,fill = nivel_educ)) +
@@ -279,7 +292,10 @@ ggplot(
     caption = "Base 99 estudiantes. Fuente: Relevamiento tramo final de EIDAES 2024.",
     fill = "Nivel educativo"
   ) +
-  theme_unsam()
+  theme_unsam()+
+  theme(
+    legend.text = element_text(size = 8),# 👈 le achico un poco la letra a la leyenda
+    legend.title.position = "top")  # 👈 ponemols el título de la leyenda arriba pues más lindo
 ```
 
 
