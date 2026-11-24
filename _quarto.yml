@@ -25,7 +25,7 @@ website:
             text: Ejercicios ggplot
           - href: clases/05_graficos_theme_unsam.qmd
             text: Ejercicios ggplot theme unsam
-          - href: 06_facetado_en_ggplot.qmd
+          - href: clases/06_facetado_en_ggplot.qmd
             text: Facetado con ggplot
       - href: recursos.qmd
         text: Recursos
