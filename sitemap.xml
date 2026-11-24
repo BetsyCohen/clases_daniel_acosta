@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/about.html</loc>
-    <lastmod>2026-11-11T00:45:33.653Z</lastmod>
-  </url>
-  <url>
     <loc>https://BetsyCohen.github.io/clases_daniel_acosta/index.html</loc>
-    <lastmod>2026-11-11T00:45:33.654Z</lastmod>
+    <lastmod>2026-11-24T23:33:34.946Z</lastmod>
   </url>
   <url>
-    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/03_ejercicios_descripcion_muestra.html</loc>
-    <lastmod>2026-11-11T00:45:33.654Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/01_ejercicios_segmentacion.html</loc>
-    <lastmod>2026-11-11T00:45:33.654Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/04_ejercicios_ggplot.html</loc>
-    <lastmod>2026-11-11T00:45:33.654Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/recursos.html</loc>
-    <lastmod>2026-11-11T00:45:33.655Z</lastmod>
+    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/05_graficos_theme_unsam.html</loc>
+    <lastmod>2026-11-24T23:33:34.946Z</lastmod>
   </url>
   <url>
     <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/00_manipulacion_datos.html</loc>
-    <lastmod>2026-11-11T00:45:33.654Z</lastmod>
+    <lastmod>2026-11-24T23:33:34.946Z</lastmod>
   </url>
   <url>
-    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/02_ejercicios_graficos.qmd.html</loc>
-    <lastmod>2026-11-11T00:45:33.654Z</lastmod>
+    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/04_ejercicios_ggplot.html</loc>
+    <lastmod>2026-11-24T23:33:34.946Z</lastmod>
   </url>
   <url>
-    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/03_workflows.html</loc>
-    <lastmod>2026-11-11T00:45:33.654Z</lastmod>
+    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/06_facetado_en_ggplot.html</loc>
+    <lastmod>2026-11-24T23:33:34.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/recursos.html</loc>
+    <lastmod>2026-11-24T23:33:34.947Z</lastmod>
   </url>
   <url>
     <loc>https://BetsyCohen.github.io/clases_daniel_acosta/plan.html</loc>
-    <lastmod>2026-11-11T00:45:33.655Z</lastmod>
+    <lastmod>2026-11-24T23:33:34.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/about.html</loc>
+    <lastmod>2026-11-24T23:33:34.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/01_ejercicios_segmentacion.html</loc>
+    <lastmod>2026-11-24T23:33:34.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/03_workflows.html</loc>
+    <lastmod>2026-11-24T23:33:34.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/02_ejercicios_graficos.qmd.html</loc>
+    <lastmod>2026-11-24T23:33:34.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BetsyCohen.github.io/clases_daniel_acosta/clases/03_ejercicios_descripcion_muestra.html</loc>
+    <lastmod>2026-11-24T23:33:34.946Z</lastmod>
   </url>
 </urlset>
